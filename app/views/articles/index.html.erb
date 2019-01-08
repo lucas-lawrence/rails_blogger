@@ -9,4 +9,7 @@
 </ul>
 <br><br>
 <%= link_to "Search by Tags", tags_path %>
-<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+<%= link_to "Users", authors_path%>
+<%if logged_in?%>
+  <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+<%end%>
