@@ -11,6 +11,9 @@
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
+<p>
+  Viewed <%= pluralize(@article.view_count, "time")%>
+</p>
 <%if logged_in?%>
 <%= link_to "edit", edit_article_path(@article) %>
 <%= link_to "delete", article_path(@article), method: :delete,
